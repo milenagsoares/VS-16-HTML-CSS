@@ -1,245 +1,89 @@
-/* Variáveis de cores */
-:root {
-    --cor-primaria: #2c3e50;
-    --cor-secundaria: #3498db;
-    --cor-texto: #333;
-    --cor-texto-claro: #fff;
-    --cor-fundo: #f9f9f9;
-    --cor-destaque: #e74c3c;
-    --cor-borda: #ddd;
-}
-
-/* Reset e estilos gerais */
-* {
+/* Estilos Gerais */
+body {
+    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #eaf6fb; /* azul bem claro */
+    color: #333;
     line-height: 1.6;
-    color: var(--cor-texto);
-    background-color: var(--cor-fundo);
-}
-
-.container {
-    width: 90%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 0 15px;
 }
 
 /* Cabeçalho */
 .cabecalho {
-    background-color: var(--cor-primaria);
-    color: var(--cor-texto-claro);
+    background-color: #3498db;
+    color: rgb(238, 227, 227);
     padding: 2rem 0;
     text-align: center;
 }
 
 .cabecalho h1 {
+    margin: 0;
     font-size: 2.5rem;
-    margin-bottom: 0.5rem;
 }
 
-.cabecalho p {
-    font-size: 1.2rem;
-    opacity: 0.9;
+/* Conteúdo Principal */
+.conteudo {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
 }
 
-/* Menu principal */
-.menu-principal ul {
-    display: flex;
-    justify-content: center;
-    list-style: none;
-    margin-top: 1.5rem;
-}
-
-.menu-principal li {
-    margin: 0 1rem;
-}
-
-.menu-principal a {
-    color: var(--cor-texto-claro);
-    text-decoration: none;
-    font-weight: 500;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-}
-
-.menu-principal a:hover {
-    background-color: rgba(255, 255, 255, 0.1);
-}
-
-.menu-principal i {
-    margin-right: 0.5rem;
-}
-
-/* Conteúdo principal */
-.conteudo-principal {
-    padding: 3rem 0;
-}
-
-/* Destaque */
-.card-destaque {
-    display: flex;
-    flex-direction: column;
-    background-color: white;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+/* Seção de Destaque */
+.destaque {
     margin-bottom: 3rem;
 }
 
-.card-destaque img {
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-}
-
-.card-conteudo {
-    padding: 2rem;
-}
-
-.card-conteudo h2 {
-    color: var(--cor-primaria);
+.destaque h2 {
+    text-align: center;
+    color: #2c3e50;
     margin-bottom: 1rem;
 }
 
-/* Seção de destinos */
-.secao-destinos {
-    margin: 3rem 0;
-}
-
-.secao-destinos h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: var(--cor-primaria);
-}
-
-.grid-destinos {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-}
-
-.card-destino {
-    background-color: white;
+.destino-destaque {
+    position: relative;
     border-radius: 8px;
     overflow: hidden;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
 }
 
-.card-destino:hover {
-    transform: translateY(-5px);
-}
-
-.card-destino img {
+.destino-destaque img {
     width: 100%;
-    height: 200px;
+    height: 90px;
     object-fit: cover;
 }
 
-.card-destino h3 {
-    padding: 1rem;
-    color: var(--cor-primaria);
+.info-destino {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    color: white;
+    padding: 1.5rem;
 }
 
-.card-destino p {
-    padding: 0 1rem 1.5rem;
-    color: #666;
+.info-destino h3 {
+    margin: 0;
+    font-size: 1.8rem;
 }
 
-/* Seção de dicas */
-.secao-dicas {
-    margin: 3rem 0;
-}
-
-.secao-dicas h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: var(--cor-primaria);
-}
-
-.dicas-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    gap: 2rem;
-}
-
-.dica {
-    background-color: white;
-    padding: 2rem;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-}
-
-.dica i {
-    font-size: 2.5rem;
-    color: var(--cor-secundaria);
-    margin-bottom: 1rem;
-}
-
-.dica h3 {
-    margin-bottom: 1rem;
-    color: var(--cor-primaria);
-}
-
-/* Seção de listas */
-.secao-lista {
-    margin: 3rem 0;
-}
-
-.secao-lista h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-    color: var(--cor-primaria);
-}
-
-.lista-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    background-color: white;
-    padding: 2rem;
-    border-radius: 8px;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
-}
-
-.lista-item h3 {
-    color: var(--cor-primaria);
-    margin-bottom: 1rem;
-    padding-bottom: 0.5rem;
-    border-bottom: 2px solid var(--cor-borda);
-}
-
-.lista-item ol, .lista-item ul {
-    padding-left: 1.5rem;
-}
-
-.lista-item li {
-    margin-bottom: 0.5rem;
+.info-destino p {
+    margin: 0.5rem 0 0;
+    font-style: italic;
 }
 
 /* Newsletter */
 .newsletter {
-    background-color: var(--cor-primaria);
-    color: var(--cor-texto-claro);
-    padding: 3rem 0;
+    background-color: #2ecc71;
+    padding: 2rem;
+    border-radius: 8px;
+    margin-bottom: 3rem;
     text-align: center;
 }
 
 .newsletter h2 {
-    margin-bottom: 1rem;
-}
-
-.newsletter p {
-    margin-bottom: 1.5rem;
-    opacity: 0.9;
+    color: white;
+    margin-top: 0;
 }
 
 .form-newsletter {
@@ -250,114 +94,89 @@ body {
 
 .form-newsletter input {
     flex: 1;
-    padding: 0.8rem 1rem;
+    padding: 0.8rem;
     border: none;
     border-radius: 4px 0 0 4px;
     font-size: 1rem;
 }
 
-/* Rodapé */
-.rodape {
-    background-color: #222;
-    color: var(--cor-texto-claro);
-    padding: 3rem 0 0;
+.form-newsletter button {
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    padding: 0 1.5rem;
+    border-radius: 0 4px 4px 0;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
 }
 
-.rodape-coluna {
+.form-newsletter button:hover {
+    background-color: #c0392b;
+}
+
+/* Catálogo de Destinos */
+.catalogo h2 {
+    text-align: center;
+    color: #2c3e50;
     margin-bottom: 2rem;
 }
 
-.rodape-coluna h3 {
-    color: var(--cor-texto-claro);
-    margin-bottom: 1.5rem;
-    font-size: 1.2rem;
+.lista-destinos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
 }
 
-.rodape-coluna ul {
-    list-style: none;
+.destino {
+    background-color: white;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
 }
 
-.rodape-coluna li {
-    margin-bottom: 0.5rem;
+.destino:hover {
+    transform: translateY(-5px);
 }
 
-.rodape-coluna a {
-    color: #aaa;
-    text-decoration: none;
-    transition: color 0.3s ease;
+.destino img {
+    display: block;
+    margin: 0 auto;
+    width: 32px;
+    height: 18px;
+    object-fit: cover;
 }
 
-.rodape-coluna a:hover {
-    color: var(--cor-texto-claro);
-}
-
-.redes-sociais {
-    display: flex;
-    gap: 1rem;
-}
-
-.redes-sociais a {
-    color: #aaa;
-    font-size: 1.5rem;
-    transition: color 0.3s ease;
-}
-
-.redes-sociais a:hover {
-    color: var(--cor-texto-claro);
-}
-
-.rodape-creditos {
+.destino h3 {
+    padding: 1rem;
+    margin: 0;
     text-align: center;
-    padding: 1.5rem 0;
-    border-top: 1px solid #444;
-    margin-top: 2rem;
-    font-size: 0.9rem;
-    color: #aaa;
+    color: #2c3e50;
 }
 
-/* Botões */
-.botao {
-    display: inline-block;
-    background-color: var(--cor-secundaria);
+/* Rodapé */
+.rodape {
+    background-color: #5dade2; /* azul mais claro */
     color: white;
-    padding: 0.8rem 1.5rem;
-    border-radius: 4px;
-    text-decoration: none;
-    font-weight: 500;
-    transition: background-color 0.3s ease;
-    border: none;
-    cursor: pointer;
-}
-
-.botao:hover {
-    background-color: #2980b9;
-}
-
-.form-newsletter .botao {
-    border-radius: 0 4px 4px 0;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: 3rem;
 }
 
 /* Responsividade */
 @media (max-width: 768px) {
-    .menu-principal ul {
-        flex-direction: column;
-    }
-    
-    .menu-principal li {
-        margin: 0.5rem 0;
-    }
-    
     .form-newsletter {
         flex-direction: column;
     }
     
-    .form-newsletter input {
+    .form-newsletter input,
+    .form-newsletter button {
+        width: 100%;
         border-radius: 4px;
-        margin-bottom: 0.5rem;
     }
     
-    .form-newsletter .botao {
-        border-radius: 4px;
-        width: 100%;
+    .form-newsletter button {
+        margin-top: 0.5rem;
     }
 }
