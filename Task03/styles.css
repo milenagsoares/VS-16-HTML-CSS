@@ -1,0 +1,351 @@
+/* Layout fluido e responsivo */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2vw;
+    box-sizing: border-box;
+}
+
+@media (min-width: 768px) {
+    .container {
+        padding: 0 3vw;
+    }
+    .destinations {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 2em;
+    }
+    .destination-card {
+        flex: 1 1 48%;
+        min-width: 0;
+        margin-bottom: 0;
+    }
+    .contact-container {
+        flex-direction: row;
+        gap: 2em;
+    }
+    .contact-form {
+        flex: 2;
+    }
+    .contact-info {
+        flex: 1;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        padding: 0 4vw;
+    }
+    .destination-card {
+        flex: 1 1 30%;
+        min-width: 0;
+        margin-bottom: 0;
+    }
+    .saiba-mais {
+        width: auto;
+    }
+}
+
+@media (max-width: 600px) {
+    .container {
+        padding: 0 1em;
+    }
+    .hero {
+        padding: 1.2em 0.5em;
+    }
+    .destination-card {
+        padding: 1em;
+    }
+    .destination-img {
+        max-width: 100%;
+        aspect-ratio: 16/9;
+    }
+    .cta-button {
+        font-size: 0.95em;
+        padding: 0.6em 1em;
+    }
+    footer {
+        padding: 1em 0 0.7em 0;
+    }
+}
+/* ... (manter todos os estilos anteriores) ... */
+
+body {
+    background: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+    font-family: 'Segoe UI', Arial, sans-serif;
+    color: #2c3e50;
+}
+
+header {
+    background: linear-gradient(90deg, #43cea2 0%, #185a9d 100%);
+    color: #fff;
+    padding: 2rem 0 1rem 0;
+    box-shadow: 0 2px 8px rgba(24,90,157,0.08);
+}
+
+nav {
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(24,90,157,0.05);
+    margin-bottom: 2rem;
+}
+
+nav ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    padding: 1rem 0;
+    justify-content: center;
+}
+
+nav a {
+    color: #185a9d;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+nav a:hover, nav a[aria-current="page"] {
+    color: #43cea2;
+}
+
+.hero {
+    background: rgba(255,255,255,0.7);
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.destination-card {
+    background: linear-gradient(120deg, #fdfbfb 0%, #ebedee 100%);
+    border: 2px solid #43cea2;
+    box-shadow: 0 4px 16px rgba(67,206,162,0.08);
+}
+
+.cta-button {
+    background: #185a9d;
+    color: #fff;
+    border: none;
+    border-radius: 6px;
+    padding: 0.7rem 1.5rem;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.cta-button:hover {
+    background: #43cea2;
+    color: #185a9d;
+}
+
+footer {
+    background: #185a9d;
+    color: #fff;
+    text-align: center;
+    padding: 1.5rem 0 1rem 0;
+    margin-top: 2rem;
+    border-radius: 0 0 12px 12px;
+}
+
+/* Imagens dos cards de destino */
+.destination-img {
+    width: 100%;
+    max-width: 300px;
+    height: 180px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 16px auto;
+    border-radius: 8px;
+}
+
+/* Página de Destinos */
+.destinations {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+.destination-card h3 {
+    color: #2c3e50;
+    margin-bottom: 1rem;
+    font-size: 1.3rem;
+}
+
+.destination-card ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.destination-card li {
+    margin-bottom: 0.5rem;
+}
+
+.saiba-mais {
+    width: 100%;
+    margin-top: 1rem;
+}
+
+/* Página de Contato */
+.contact-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-top: 2rem;
+}
+
+.contact-form, .contact-info {
+    background: white;
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.contact-form h3, .contact-info h3 {
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-size: 1.3rem;
+}
+
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.form-group textarea {
+    min-height: 150px;
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-top: 1rem;
+}
+
+.social-links a {
+    color: #3498db;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.social-links a:hover {
+    text-decoration: underline;
+}
+
+.map-container {
+    margin-top: 2rem;
+}
+
+.map-placeholder {
+    background-color: #eee;
+    padding: 2rem;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 1rem;
+}
+
+/* Media Queries para tablets e desktop */
+@media (min-width: 768px) {
+    .destinations {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    
+    .destination-card {
+        flex: 1 1 calc(50% - 1rem);
+    }
+    
+    .contact-container {
+        flex-direction: row;
+    }
+    
+    .contact-form {
+        flex: 2;
+    }
+    
+    .contact-info {
+        flex: 1;
+    }
+}
+
+@media (min-width: 992px) {
+    .destination-card {
+        flex: 1 1 calc(33.333% - 1.5rem);
+    }
+    
+    .saiba-mais {
+        width: auto;
+    }
+
+/* ... (manter todos os estilos anteriores) ... */
+
+/* Estilos específicos para a página inicial */
+.tagline {
+    font-style: italic;
+    margin-top: 0.5rem;
+    opacity: 0.9;
+}
+
+.testimonial {
+    margin: 3rem 0;
+    text-align: center;
+    font-style: italic;
+    color: #555;
+}
+
+.testimonial blockquote {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.testimonial p {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.testimonial footer {
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.footer-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    margin-bottom: 2rem;
+}
+
+.copyright {
+    text-align: center;
+    font-size: 0.9rem;
+    opacity: 0.8;
+}
+
+/* Media Queries para footer em telas maiores */
+@media (min-width: 768px) {
+    .footer-content {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+}
+}

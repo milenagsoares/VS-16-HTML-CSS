@@ -62,9 +62,13 @@ body {
     padding: 1.5rem;
 }
 
-.info-destino h3 {
-    margin: 0;
-    font-size: 1.8rem;
+/* Imagens do catálogo de destinos */
+.lista-destinos .destino img {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
 .info-destino p {

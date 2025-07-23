@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Viagens - Contato</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Pular para conteúdo principal</a>
+    
+    <header>
+        <div class="container">
+            <h1>Entre em Contato</h1>
+        </div>
+    </header>
+    
+    <nav>
+        <ul class="container">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="destinos.html">Destinos</a></li>
+            <li><a href="contato.html" aria-current="page">Contato</a></li>
+        </ul>
+    </nav>
+    
+    <main id="main-content" class="container">
+        <section class="hero">
+            <h2>Fale Comigo</h2>
+            <p>Tire suas dúvidas ou compartilhe suas próprias experiências de viagem</p>
+        </section>
+        
+        <div class="contact-container">
+            <section class="contact-form">
+                <h3>Formulário de Contato</h3>
+                <form>
+                    <div class="form-group">
+                        <label for="name">Nome:</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">E-mail:</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="subject">Assunto:</label>
+                        <select id="subject" name="subject">
+                            <option value="duvida">Dúvida</option>
+                            <option value="sugestao">Sugestão</option>
+                            <option value="relato">Relato de Viagem</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="message">Mensagem:</label>
+                        <textarea id="message" name="message" rows="5" required></textarea>
+                    </div>
+                    
+                    <button type="submit" class="cta-button">Enviar Mensagem</button>
+                </form>
+            </section>
+            
+            <section class="contact-info">
+                <h3>Informações de Contato</h3>
+                <address>
+                    <p><strong>E-mail:</strong> <a href="mailto:contato@minhasviagens.com">contato@minhasviagens.com</a></p>
+                    <p><strong>Telefone:</strong> <a href="tel:+5511999999999">(11) 99999-9999</a></p>
+                    <p><strong>Redes Sociais:</strong></p>
+                    <div class="social-links">
+                        <a href="#" aria-label="Instagram">📷 Instagram</a>
+                        <a href="#" aria-label="Facebook">👍 Facebook</a>
+                        <a href="#" aria-label="Twitter">🐦 Twitter</a>
+                    </div>
+                </address>
+                
+                <div class="map-container">
+                    <h4>Onde Estou</h4>
+                    <div class="map-placeholder" aria-label="Mapa mostrando a localização em São Paulo, Brasil">
+                        <!-- Mapa seria incorporado aqui na prática -->
+                        <p>📍 São Paulo, Brasil</p>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Minhas Viagens pelo Mundo</p>
+        </div>
+    </footer>
+</body>
+</html>

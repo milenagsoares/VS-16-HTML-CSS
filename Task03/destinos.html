@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Viagens - Destinos</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <a href="#main-content" class="skip-link">Pular para conteúdo principal</a>
+    
+    <header>
+        <div class="container">
+            <h1>Destinos Visitados</h1>
+        </div>
+    </header>
+    
+    <nav>
+        <ul class="container">
+            <li><a href="index.html">Início</a></li>
+            <li><a href="destinos.html" aria-current="page">Destinos</a></li>
+            <li><a href="contato.html">Contato</a></li>
+        </ul>
+    </nav>
+    
+    <main id="main-content" class="container">
+        <section class="hero">
+            <h2>Meus Destinos Favoritos</h2>
+            <p>Conheça os lugares incríveis que já visitei e minhas experiências em cada um</p>
+        </section>
+        
+        <section class="destinations">
+            <article class="destination-card">
+                <picture>
+                    <source srcset="img/img1.jpg" media="(min-width: 600px)">
+                    <source srcset="img/img1-small.jpg" media="(max-width: 599px)">
+                    <img src="img/img1.jpg" alt="Paris, França" class="destination-img">
+                </picture>
+                <h3>Paris, França</h3>
+                <ul>
+                    <li>Torre Eiffel e sua vista deslumbrante</li>
+                    <li>Museu do Louvre e a Mona Lisa</li>
+                    <li>Cafés charmosos de Montmartre</li>
+                    <li>Cruzeiro pelo Rio Sena ao pôr do sol</li>
+                </ul>
+                <button class="cta-button saiba-mais">Saiba Mais</button>
+            </article>
+            
+            <article class="destination-card">
+                <picture>
+                    <source srcset="img/img2.jpg" media="(min-width: 600px)">
+                    <source srcset="img/img2-small.jpg" media="(max-width: 599px)">
+                    <img src="img/img2.jpg" alt="Tóquio, Japão" class="destination-img">
+                </picture>
+                <h3>Tóquio, Japão</h3>
+                <ul>
+                    <li>Vistas futuristas de Shibuya</li>
+                    <li>Templos tradicionais em Asakusa</li>
+                    <li>Experiências gastronômicas únicas</li>
+                    <li>Parques tranquilos no meio da metrópole</li>
+                </ul>
+                <button class="cta-button saiba-mais">Saiba Mais</button>
+            </article>
+            
+            <article class="destination-card">
+                <picture>
+                    <source srcset="img/img3.jpg" media="(min-width: 600px)">
+                    <source srcset="img/img3-small.jpg" media="(max-width: 599px)">
+                    <img src="img/img3.jpg" alt="Rio de Janeiro, Brasil" class="destination-img">
+                </picture>
+                <h3>Rio de Janeiro, Brasil</h3>
+                <ul>
+                    <li>Cristo Redentor e Pão de Açúcar</li>
+                    <li>Praias de Ipanema e Copacabana</li>
+                    <li>Floresta da Tijuca e trilhas urbanas</li>
+                    <li>Cultura vibrante e vida noturna</li>
+                </ul>
+                <button class="cta-button saiba-mais">Saiba Mais</button>
+            </article>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Minhas Viagens pelo Mundo</p>
+        </div>
+    </footer>
+</body>
+</html>
